@@ -1,0 +1,67 @@
+
+ <!-- <div ui-view></div> -->
+<div class="container" >
+  <div class="row col-md-12">
+   <table class="table table-bordered" ng-init="deleteinit()">
+    <thead>
+      <tr>
+        <th>project</th>
+        <th>department</th>
+        <th>issueType</th>
+        <th>summary</th>
+        <th>description</th>
+        <th>priority</th>
+        <th>createdDate</th>
+        
+        <th>dueDate</th>
+        <th>status</th>
+        <th>note</th>
+        <th>attachment</th>
+        <th>assignTo</th>
+      <th></th>
+     
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="x in tickets">
+        <td>{{x.project}}</td>
+        <td>{{x.department}}</td>
+        <td>{{x.issueType}}</td>
+        <td>{{x.summary}}</td>
+         <td>{{x.description}}</td>
+        <td>{{x.priority}}</td>
+         <td>{{x.createdDate}}</td>
+        
+         <td>{{x.dueDate}}</td>
+        <td>{{x.status}}</td>
+         <td>{{x.note}}</td>
+        <td>{{x.attachment}}</td>
+         <td>{{x.assignTo}}</td>
+         <td><input type="button" class="btn btn-primary" value="Edit" ui-sref="edit_ticket({ticketid:x.id})"></td>
+          <td><input type="button" class="btn btn-danger" value="Delete" ng-click="delete_ticket(x.id)"></td>
+      </tr>
+    
+    </tbody>
+  </table>
+
+
+   <!-- <table class="table table-bordered">
+    <tr>
+      <th> id</th>
+      <th>title</th>
+     <th> body</th>
+
+    </tr>
+     <tr ng-repeat="x in tickets">
+      <td> {{x.id}}</td>
+      <td>{{x.title}}</td>
+     <td>{{ x.body}}</td>
+
+
+    </tr>
+
+  </table>  -->
+</div>
+
+</div>
